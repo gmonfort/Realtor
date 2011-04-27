@@ -1,0 +1,13 @@
+customer1:
+  last_name: "cust1"
+  phone: "111"
+  # properties: prop1, prop2
+
+customer2:
+  last_name: "cust2"
+  phone: "222"
+  # properties: prop3
+
+customer3:
+  last_name: "cust3"
+  phone: "333"

@@ -1,0 +1,11 @@
+property1:
+  name: "prop1"
+  owner: customer1
+
+property2:
+  name: "prop2"
+  owner: customer1
+
+property3:
+  name: "prop3"
+  owner: customer2
