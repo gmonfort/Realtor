@@ -3,12 +3,6 @@ require "spec_helper"
 describe CustomersController do
   describe "routing" do
 
-    it "should welcome the user" do
-      visit '/properties'
-      save_and_open_page
-      page.should have_content('Welcome')
-    end
-
     it "recognizes and generates #index" do
       { :get => "/customers" }.should route_to(:controller => "customers", :action => "index")
     end

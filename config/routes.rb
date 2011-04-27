@@ -1,4 +1,8 @@
 RealState::Application.routes.draw do
+  resources :charges
+
+  resources :rentals
+
   devise_for :users
 
   resources :properties

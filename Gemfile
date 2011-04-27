@@ -40,6 +40,7 @@ group :development, :test do
   gem "shoulda-matchers"
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
   gem 'autotest'
   gem 'launchy'
   gem 'ruby-debug19', :require => 'ruby-debug'
