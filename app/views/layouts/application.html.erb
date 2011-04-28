@@ -5,24 +5,25 @@
     <title>Realtor - <%= controller.action_name %></title>
     <%# stylesheet_link_tag 'scaffold' %>
     <%= stylesheet_link_tag 'screen' %>
+    <%= stylesheet_link_tag 'custom_styles' %>
     <%# stylesheet_link_tag 'print' %>
     <%# stylesheet_link_tag 'ie' %>
     <%# stylesheet_link_tag 'style' %>
     <%= javascript_include_tag :defaults %>
-    <%= javascript_include_tag 'json_support' %>
+    <%# javascript_include_tag 'json_support' %>
   </head>
   <body>
     <div class="container">
       <%= render :partial => 'common/header' %>
 
       <div id="content">
-        <%= render :partial => 'common/flashes' %>
         <%= yield %>
       </div>
 
       <%= render :partial => 'common/footer' %>
       <%= yield :js_content %>
-      <%= debug(params) if Rails.env.development? %>
+      <br />
     </div>
+      <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

@@ -1,0 +1,7 @@
+<div class="span-24 nav_bar">
+  <ul class="tabs">
+    <% items.each do |label, url| %>
+      <li><%= link_to_with_selected_if_current(label, url) %></li>
+    <% end %>
+  </ul>
+</div>

@@ -1,15 +1,19 @@
 RealState::Application.routes.draw do
   get "home/index"
 
+  resources :customers
+  resources :properties
   resources :charges
-
   resources :rentals
 
   devise_for :users
+  devise_scope :user do
+    get "/login" => "devise/sessions#new"
+    get "/logout" => "devise/sessions#destroy"
+  end
 
-  resources :properties
-
-  resources :customers
+  match '/dashboard' => 'home#dashboard', :as => :user_root
+  match '/dashboard' => 'home#dashboard', :as => :dashboard
 
   root :to => "home#index"
 

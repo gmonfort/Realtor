@@ -22,17 +22,15 @@ module ApplicationHelper
   end
 
   def get_nav_bar
-    bar = []
-    # bar << link_to("Users", users_path)
-    bar << content_tag(:li) { link_to_with_selected_if_current("Home", root_path) }
-    bar << content_tag(:li) { link_to_with_selected_if_current("Create new Customer", new_customer_path) }
-    bar << content_tag(:li) { link_to_with_selected_if_current("Create new Property", new_property_path) }
     unless current_user.nil?
-      bar << content_tag(:li) { link_to_with_selected_if_current("Dashboard", '/dashboard') }
-      # bar << content_tag(:li) { link_to_with_selected_if_current("Create new Customer", new_customer_path) }
-      # bar << content_tag(:li) { link_to_with_selected_if_current("Create new Property", new_property_path) }
+      items = {
+        'Home' => root_path,
+        'Dashboard' => dashboard_path,
+        'Create new Customer' => new_customer_path,
+        'Create new Property' => new_property_path
+      }
+      render :partial => 'common/nav_bar', :locals => { :items => items }
     end
-    return content_tag(:ul, :class => 'tabs') { raw bar.join('') }
   end
 
   def link_to_with_selected_if_current(name, options = {}, html_options = {})
