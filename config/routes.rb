@@ -1,4 +1,6 @@
 RealState::Application.routes.draw do
+  get "home/index"
+
   resources :charges
 
   resources :rentals
@@ -8,6 +10,8 @@ RealState::Application.routes.draw do
   resources :properties
 
   resources :customers
+
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

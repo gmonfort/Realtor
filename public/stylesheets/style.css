@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 10px;
+    color: #000000;
+}
+
+.hidden { display: none !important; }
+.clear { clear: both; }
+.left { float: left; }
+.right { float: right; }
+.block { margin-bottom: 5px; padding: 5px 0; }
+.small { font-size: 8pt; }
+
+li { list-style-type: none; }
+p { color: #333333; }
+
+a { text-decoration: none; color: #660000; padding: 0 3px; }
+a:link { color: #660000; }
+a:visited { color: #660000; }
+a:hover { color: #660000; text-decoration: underline; }
+a:active { color: #660000; text-decoration: underline; }
+
+/* Header */
+
+#main {
+  margin: 0 auto;
+  width: 950px;
+}
+#header {
+}
+#header .login {
+  float: right;
+  width: 300px;
+  text-align: right;
+}
+
+/* Content */
+#content {
+    margin: 0 75px;
+    padding: 0px 20px 20px 20px;
+    border-left: 1px solid rgb(216, 210, 195);
+}
+
+h1 {
+    color: #900;
+    background-color: transparent;
+    font-family: arial, verdana, helvetica, sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: left;
+    margin: 1em 0 0 0;
+    padding: 1em 0;
+    border-top: 1px solid rgb(216, 210, 195);
+}
+
+h1 a {font-family: arial, verdana, helvetica, sans-serif;font-size: 100%;font-weight: bold;}
+
+h2 a {
+    color: #000099;
+    background-color: transparent;
+    font-family: arial, verdana, helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px 0;
+}
+h2 a:link { color: #000099; }
+h2 a:visited { color: #000099; }
+h2 a:hover { color: #000099; text-decoration: underline; }
+h2 a:active { color: #000099; text-decoration: underline; }
+
+h3 {
+    color: #900;
+    background-color: transparent;
+    font-family: arial, verdana, helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: left;
+    margin: 1em 0 0 0;
+    padding: 1em 0;
+    border-top: 1px solid rgb(216, 210, 195);
+}
+
+/* ##### Header ##### */
+fieldset {
+    margin: 1em 0;
+    padding: 1.2em;
+    padding-top: 0.4em;
+    background: #FFFFFF;
+    border: 1px solid #e7e8ac;
+}
+
+form label {
+    color: #464337;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 0;
+    width: 140px;
+    text-align: left;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type = text], input[type = password] {
+    background: #F8F8F8 none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
+    color: #777777;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    width: 250px;
+}
+
+input[type = checkbox] {
+    background-color: #F8F8F8;
+    border: 2px solid #CCCCCC;
+    color: #777777;
+    padding: 5px;
+}
+
+input[type = submit] {
+    font-weight: bold;
+    background-color: #000033;
+    color: #ffffff;
+    border: 2px solid #00376E;
+    padding: 3px;
+    margin: 10px 0;
+}
+
+select {
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #262626;
+}
+
+/* Dashboard */
+div.dashboard {
+    width: 550px;
+}
+
+#flashes {
+    text-align: center;
+    padding: .3em .4em;
+    margin: 0 auto .5em;
+    clear:  both;
+}
+
+#flashes div.error {
+    border: thin solid #8b0000;
+    background: #ffc0cb;
+}
+#flashes div.notice, #flashes div.info {
+    border: thin solid #ff0;
+    background: #ffe;
+    /* color: #333; */
+    /* background: #efe; */
+    /* border: solid 1px #bd7; */
+}
+#flashes div.warning {
+    border: thin solid #b8860b;
+    background: #ff0;
+}
