@@ -25,6 +25,7 @@ class PropertiesController < ApplicationController
   # GET /properties/new.xml
   def new
     @property = Property.new
+    @customers = Customer.all
 
     respond_to do |format|
       format.html # new.html.erb

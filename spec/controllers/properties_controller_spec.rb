@@ -10,6 +10,10 @@ describe PropertiesController do
     @mock_property ||= mock_model(Property, stubs).as_null_object
   end
 
+  def mock_customers_list(stubs={})
+    @mock_customers_list ||= mock_model(Customer, stubs).as_null_object
+  end
+
   describe "GET index" do
     it "assigns all properties as @properties" do
       Property.stub(:all) { [mock_property] }
@@ -31,6 +35,12 @@ describe PropertiesController do
       Property.stub(:new) { mock_property }
       get :new
       assigns(:property).should be(mock_property)
+    end
+
+    it "assigns a list of customers as @customers" do
+      Property.stub(:new) { mock_property }
+      get :new
+      assigns(:customers).should be(mock_property)
     end
   end
 
