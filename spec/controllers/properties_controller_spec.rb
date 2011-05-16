@@ -6,12 +6,14 @@ require 'spec_helper'
 
 describe PropertiesController do
 
+  login_user
+
   def mock_property(stubs={})
     @mock_property ||= mock_model(Property, stubs).as_null_object
   end
 
-  def mock_customers_list(stubs={})
-    @mock_customers_list ||= mock_model(Customer, stubs).as_null_object
+  def mock_customer(stubs={})
+    @mock_customer ||= mock_model(Customer, stubs).as_null_object
   end
 
   describe "GET index" do
@@ -39,8 +41,9 @@ describe PropertiesController do
 
     it "assigns a list of customers as @customers" do
       Property.stub(:new) { mock_property }
+      Customer.stub(:all) { [mock_customer] }
       get :new
-      assigns(:customers).should be(mock_property)
+      assigns(:customers).should eq([mock_customer])
     end
   end
 
