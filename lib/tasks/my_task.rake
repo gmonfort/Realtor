@@ -17,10 +17,10 @@
 
 namespace :db do
   namespace :dump do
-    desc 'Dump db structure to SQL file'
-    task :structure => :environment do |a|
+    desc 'Dump db structure + data to SQL file, optionally a name for the dump file can be provided'
+    task :all, :name, :needs => :environment do |t, args|
+      args.with_defaults(:name => "db_dump")
 
-      puts "ARG: " + a.inspect
       begin
         config = ActiveRecord::Base.configurations[RAILS_ENV || 'development']
 
@@ -28,7 +28,7 @@ namespace :db do
         p = config['password']
         db = config['database']
 
-        dump_file = File.join(Rails.root, 'db', db + "_dump.sql.gz")
+        dump_file = File.join(Rails.root, 'db', args[:name] + "__" + db + ".sql.gz")
 
         case config["adapter"]
         when "mysql"
